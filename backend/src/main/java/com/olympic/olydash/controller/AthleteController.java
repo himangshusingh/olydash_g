@@ -45,7 +45,6 @@ public class AthleteController {
     @GetMapping("/getAll")
     public List<Athlete> getAllAthletes(){
         return athleteRepository.findAll();
-        //return lbooks;
 
     }
 
@@ -57,11 +56,6 @@ public class AthleteController {
         else
             return null;
     }
-
-    // @GetMapping("/getbycountry/{country}")
-    // public List<Athlete> findByCountry(@PathVariable String country){
-    //     return athleteRepository.findByCountry(country);
-    // }
 
     @DeleteMapping("/delete/{id}")
     public void deleteBook(@PathVariable Long id)

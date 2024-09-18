@@ -55,6 +55,9 @@ public class OlydashApplication {
 	}
 }
 
+
+
+// to initialize UI, currently keeping Angluar localhost:4200 in mind
 @Configuration
 class MyWebMvcConfigurer implements WebMvcConfigurer {
 
@@ -65,5 +68,4 @@ class MyWebMvcConfigurer implements WebMvcConfigurer {
 				.allowedMethods("GET", "POST", "PUT", "DELETE")
 				.allowedHeaders("Content-Type", "Authorization");
 	}
-
 }
