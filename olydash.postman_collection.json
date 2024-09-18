@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "32d3e618-2f79-470d-96d5-2bdfe190de12",
 		"name": "olydash",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "38002036"
 	},
 	"item": [
@@ -20,7 +20,19 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/api/user/signup"
+				"url": {
+					"raw": "http://localhost:8080/api/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"signup"
+					]
+				}
 			},
 			"response": []
 		},
@@ -38,7 +50,19 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/api/user/login"
+				"url": {
+					"raw": "http://localhost:8080/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
 			},
 			"response": []
 		},
@@ -47,7 +71,18 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
-				"url": "http://localhost:8080/athletes/updateathlete"
+				"url": {
+					"raw": "http://localhost:8080/athletes/updateathlete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"athletes",
+						"updateathlete"
+					]
+				}
 			},
 			"response": []
 		}
