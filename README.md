@@ -12,3 +12,15 @@
 Java 17
 Gradle 8.4
 ```
+
+
+### API AUTHENTICATION
+
+Now to test the api, API AUTHENTICATION IS NEEDED
+
+To authenticate the API use the following header in Postman
+
+```declarative
+api.key= api-key-from-application.properties file
+```
+

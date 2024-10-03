@@ -51,10 +51,11 @@ public class AthleteController {
     @GetMapping("/getbyid/{id}")
     public Athlete findbyid(@PathVariable Long id){
         Optional<Athlete> optional= athleteRepository.findById(id);
-        if(optional.isPresent())
-            return optional.get();
-        else
+        if (optional.isEmpty()) {
             return null;
+        } else {
+            return optional.get();
+        }
     }
 
     @DeleteMapping("/delete/{id}")
