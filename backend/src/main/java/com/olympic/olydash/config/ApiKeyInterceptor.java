@@ -15,7 +15,7 @@ public class ApiKeyInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String requestApiKey = request.getHeader("X-API-KEY");
+        String requestApiKey = request.getHeader("API-KEY");
 
         if (apiKey.equals(requestApiKey)) {
             return true; // API Key is valid

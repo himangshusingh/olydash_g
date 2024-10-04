@@ -58,14 +58,14 @@ public class OlydashApplication {
 
 
 // to initialize UI, currently keeping Angluar localhost:4200 in mind
-@Configuration
-class MyWebMvcConfigurer implements WebMvcConfigurer {
-
-	@Override
-	public void addCorsMappings(CorsRegistry registry) {
-		registry.addMapping("/**")
-				.allowedOrigins("http://localhost:4200")
-				.allowedMethods("GET", "POST", "PUT", "DELETE")
-				.allowedHeaders("Content-Type", "Authorization");
-	}
-}
+//@Configuration
+//class MyWebMvcConfigurer implements WebMvcConfigurer {
+//
+//	@Override
+//	public void addCorsMappings(CorsRegistry registry) {
+//		registry.addMapping("/**")
+//				.allowedOrigins("http://localhost:4200")
+//				.allowedMethods("GET", "POST", "PUT", "DELETE")
+//				.allowedHeaders("Content-Type", "Authorization");
+//	}
+//}
