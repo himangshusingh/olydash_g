@@ -2,7 +2,6 @@ package com.olympic.olydash.controller;
 
 import com.olympic.olydash.repository.AthleteRepository;
 import com.olympic.olydash.domain.Athlete;
-// import org.apache.el.parser.AstGreaterThanEqual;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

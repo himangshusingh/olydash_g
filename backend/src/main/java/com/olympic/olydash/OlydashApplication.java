@@ -31,8 +31,8 @@ public class OlydashApplication {
 	private static void logApplicationStartup(Environment env) {
 
 		String serverPort = env.getProperty("server.port");
-		String contextPath = env.getProperty("server.servlet.context-path");
-		contextPath = "/";
+//		String contextPath = env.getProperty("server.servlet.context-path");
+		String contextPath = "/";
 		String protocol = "http";
 		String hostAddress = "localhost";
 		try {
@@ -40,11 +40,18 @@ public class OlydashApplication {
 		} catch (UnknownHostException e) {
 			log.warn("The host name could not be determined, using `localhost` as fallback");
 		}
-		log.info("\n----------------------------------------------------------\n\t" +
-						"Application is running! Access URLs:\n\t" +
-						"Local: \t\t{}://localhost:{}{}\n\t" +
-						"External: \t{}://{}:{}{}\n\t" +
-						"\n-----------------------------------------------------------",
+		log.info("""
+                        
+                        ----------------------------------------------------------
+                        \t\
+                        Application is running! Access URLs:
+                        \t\
+                        Local: \t\t{}://localhost:{}{}
+                        \t\
+                        External: \t{}://{}:{}{}
+                        \t\
+                        
+                        -----------------------------------------------------------""",
 				protocol,
 				serverPort,
 				contextPath,
@@ -57,15 +64,15 @@ public class OlydashApplication {
 
 
 
-// to initialize UI, currently keeping Angluar localhost:4200 in mind
-//@Configuration
-//class MyWebMvcConfigurer implements WebMvcConfigurer {
-//
-//	@Override
-//	public void addCorsMappings(CorsRegistry registry) {
-//		registry.addMapping("/**")
-//				.allowedOrigins("http://localhost:4200")
-//				.allowedMethods("GET", "POST", "PUT", "DELETE")
-//				.allowedHeaders("Content-Type", "Authorization");
-//	}
-//}
+// to initialize UI, currently keeping Angular localhost:4200 in mind
+@Configuration
+class MyWebMvcConfigurer implements WebMvcConfigurer {
+
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**")
+				.allowedOrigins("http://localhost:4200")
+				.allowedMethods("GET", "POST", "PUT", "DELETE")
+				.allowedHeaders("Content-Type", "Authorization");
+	}
+}

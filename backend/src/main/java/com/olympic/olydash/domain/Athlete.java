@@ -1,6 +1,4 @@
 package com.olympic.olydash.domain;
-
-
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Entity;
