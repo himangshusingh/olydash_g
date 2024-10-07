@@ -1,9 +1,7 @@
 package com.olympic.olydash.domain;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name = "TBL_Athlete")
@@ -22,9 +20,9 @@ public class Athlete{
     @NotNull
     private LocalDate date;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "country_name", referencedColumnName = "country_name", nullable = false)
-//    private Country country;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "country_name", referencedColumnName = "country_name", nullable = false)
+    private Country country;
     @Column
     private String Gender;
 
@@ -54,19 +52,17 @@ public class Athlete{
     public void setDate(@NotNull LocalDate date) {
         this.date = date;
     }
-//    public Country getCountry() {
-//        return country;
-//    }
-//    public void setCountry(Country country) {
-//        this.country = country;
-//    }
+    public Country getCountry() {
+        return country;
+    }
+    public void setCountry(Country country) {
+        this.country = country;
+    }
     public String getGender() {
         return Gender;
     }
     public void setGender(String gender) {
         Gender = gender;
     }
-
-
 }
 

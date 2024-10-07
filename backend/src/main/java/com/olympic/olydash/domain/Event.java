@@ -1,7 +1,5 @@
 package com.olympic.olydash.domain;
 
-import com.olympic.olydash.domain.Sport;
-
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Entity;
@@ -19,7 +17,7 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long event_id;
     @Column @NotNull
     private String event_name;
 
@@ -31,11 +29,11 @@ public class Event {
     private String event_type_id; //this will be a foreign key, events_id_table_pending
 
     public Long geteventId() {
-        return id;
+        return event_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setEvent_id(Long event_id) {
+        this.event_id = event_id;
     }
 
     public @NotNull String getEvent_name() {
