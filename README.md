@@ -58,14 +58,8 @@ Now to test the api, API AUTHENTICATION IS NEEDED
 
 To authenticate the API use the following header in Postman
 
-  
-
-| KEY | VALUE |
-
-|-----|-------|
-
-|X-API-KEY|api-key-from-application.properties file|
-
-  
+| KEY     | VALUE                                    |
+| ------- | ---------------------------------------- |
+| API-KEY | api-key-from-application.properties file |
 
 There is no need for description as of now
