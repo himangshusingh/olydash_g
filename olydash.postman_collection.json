@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "32d3e618-2f79-470d-96d5-2bdfe190de12",
+		"_postman_id": "33bfa6c8-82a5-4cf7-b4aa-6712c2b7377b",
 		"name": "olydash",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38002036"
+		"_exporter_id": "38057462"
 	},
 	"item": [
 		{
@@ -13,10 +13,16 @@
 					"name": "saveathlete",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"misus man\",\r\n    \"country\": \"USA\",\r\n    \"gender\": \"Male\",\r\n    \"event\": \"400m relay\"\r\n}",
+							"raw": "{\r\n  \"first_name\": \"John\",\r\n  \"gender\": \"Male\",\r\n  \"last_name\": \"Doe\",\r\n  \"date\": \"2002-04-02\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -103,7 +109,13 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -114,7 +126,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/athletes/delete/65",
+							"raw": "http://localhost:8080/athletes/delete/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -123,7 +135,7 @@
 							"path": [
 								"athletes",
 								"delete",
-								"65"
+								"1"
 							]
 						}
 					},
