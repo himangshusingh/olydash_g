@@ -5,8 +5,8 @@
 - For CMD : `gradle`
 
 This file follows the Powershell approach, change the `./gradlew` with `gradle` depending upon your use case
----------------------
 
+-------------------------------
 
 ### To run the server and access the API
 
