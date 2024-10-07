@@ -5,6 +5,8 @@
 - For CMD : `gradle`
 
 This file follows the Powershell approach, change the `./gradlew` with `gradle` depending upon your use case
+---------------------
+
 
 ### To run the server and access the API
 
@@ -17,9 +19,8 @@ This file follows the Powershell approach, change the `./gradlew` with `gradle` 
 4. Import the collection and environment from the file `olympic.postman_collection.json`
 
 5. Run the collection
-
+------------------------
   
-
 ### If any changes made to the DB schema, then clean the db file and build again
 
   
@@ -40,14 +41,13 @@ This file follows the Powershell approach, change the `./gradlew` with `gradle` 
 ```
 ./gradlew bootrun
 ```
+--------------------------
 
 ### Dependencies
 
 ##### 1. Java 17
 ##### 2. Gradle 8.2.1
-
-  
-  
+------------------------
 
 ### API AUTHENTICATION
 
