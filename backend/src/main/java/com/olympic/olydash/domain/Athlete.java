@@ -1,11 +1,9 @@
 package com.olympic.olydash.domain;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Column;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "TBL_Athlete")
@@ -13,55 +11,62 @@ public class Athlete{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long athlete_id;
     @Column
     @NotNull
-    private String Name;
+    private String First_name;
     @Column
-    private String Country;
+    @NotNull
+    private String Last_name;
+    @Column
+    @NotNull
+    private LocalDate date;
+
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "country_name", referencedColumnName = "country_name", nullable = false)
+//    private Country country;
     @Column
     private String Gender;
-    @Column
-    private String Event;
 
-    public Long getId() {
-        return id;
+
+    
+    public Long getAthlete_id() {
+        return athlete_id;
     }
-
-    public void setId(Long id) {
-        this.id = id;
+    public void setAthlete_id(Long athlete_id) {
+        this.athlete_id = athlete_id;
     }
-
-    public @NotNull String getName() {
-        return Name;
+    public String getFirst_name() {
+        return First_name;
     }
-
-    public void setName(@NotNull String name) {
-        Name = name;
+    public void setFirst_name(String first_name) {
+        First_name = first_name;
     }
-
+    public String getLast_name() {
+        return Last_name;
+    }
+    public void setLast_name(String last_name) {
+        Last_name = last_name;
+    }
+    public @NotNull LocalDate getDate() {
+        return date;
+    }
+    public void setDate(@NotNull LocalDate date) {
+        this.date = date;
+    }
+//    public Country getCountry() {
+//        return country;
+//    }
+//    public void setCountry(Country country) {
+//        this.country = country;
+//    }
     public String getGender() {
         return Gender;
     }
-
     public void setGender(String gender) {
         Gender = gender;
     }
 
-    public String getCountry() {
-        return Country;
-    }
 
-    public void setCountry(String country) {
-        Country = country;
-    }
-
-    public String getEvent() {
-        return Event;
-    }
-
-    public void setEvent(String event) {
-        Event = event;
-    }
 }
 

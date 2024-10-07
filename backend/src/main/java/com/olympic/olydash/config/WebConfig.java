@@ -15,6 +15,9 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(apiKeyInterceptor)
                 .addPathPatterns("/athletes/**")
+                .addPathPatterns("/country/**")
+                .addPathPatterns("/event/**")
+                .addPathPatterns("/sport/**")
                 .addPathPatterns("/events/**");
     }
 }

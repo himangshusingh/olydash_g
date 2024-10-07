@@ -26,7 +26,7 @@ public class AthleteController {
 
     @PostMapping("/saveathlete")
     public Athlete saveathlete(@RequestBody Athlete athlete){
-        if(athlete.getId()==null){
+        if(athlete.getAthlete_id()==null){
             Athlete athlete1 = athleteRepository.save(athlete);
             return athlete1;
         }
@@ -34,9 +34,9 @@ public class AthleteController {
     }
 
     @PutMapping("/updateathlete")
-    public Athlete updatebook(@RequestBody Athlete book){
-        if(book.getId() != null){
-            Athlete book1 = athleteRepository.save(book);
+    public Athlete updatebook(@RequestBody Athlete athlete){
+        if(athlete.getAthlete_id() != null){
+            Athlete book1 = athleteRepository.save(athlete);
             return book1;
         }
         return null;
