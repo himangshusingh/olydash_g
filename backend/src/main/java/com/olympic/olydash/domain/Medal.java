@@ -10,11 +10,11 @@ public class Medal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long medal_id;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "athlete_id", referencedColumnName = "athlete_id", nullable = false)
     private Athlete athlete;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "event_id", referencedColumnName = "event_id", nullable = false)
     private Event event;
 

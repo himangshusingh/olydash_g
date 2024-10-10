@@ -21,7 +21,7 @@ public class Event {
     @Column @NotNull
     private String event_name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "sport_id", referencedColumnName = "sport_id", nullable = false)
     private Sport sport;
 
