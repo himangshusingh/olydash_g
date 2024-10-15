@@ -27,8 +27,7 @@ public class MedalController {
     @PostMapping("/savemedal")
     public Medal savemedal(@RequestBody Medal medal){
         if(medal.getMedal_id()==null){
-            Medal medal1 = medalRepository.save(medal);
-            return medal1;
+            return medalRepository.save(medal);
         }
         return null;
     }

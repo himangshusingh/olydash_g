@@ -1,6 +1,15 @@
 package com.olympic.olydash.domain;
-import jakarta.persistence.*;
+
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.GenerationType;
 import jakarta.validation.constraints.NotNull;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.FetchType;
 import java.time.LocalDate;
 
 @Entity
@@ -11,17 +20,18 @@ public class Medal {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long medal_id;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "athlete_id", referencedColumnName = "athlete_id", nullable = false)
+    @JoinColumn(name = "athlete_id", referencedColumnName = "athlete_id", nullable = true)
     private Athlete athlete;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "event_id", referencedColumnName = "event_id", nullable = false)
+    @JoinColumn(name = "event_id", referencedColumnName = "event_id", nullable = true)
     private Event event;
 
     @Column
     @NotNull
     private String medal_type;
     @Column
+    @NotNull
     private LocalDate Date;
 
 

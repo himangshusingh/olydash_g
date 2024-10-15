@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.nav {
+	font-family: 'Comfortaa', cursive;
+	font-size: 40px;
+	color: #fff;
+	width: 200px;
+	padding-left: 20px;
+	height: 100vh;
+	background-image: linear-gradient(40deg, #4C0033, #E80F88);
+	border-top-right-radius: 80px;
+	position: fixed;
+    float: left;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  
+  .nav a {
+	margin-top: 15px;
+	font-size: 20px;
+	color: #fff;
+	display: block;
+	padding: 12px;	
+	padding-left: 30px;
+	text-decoration: none;
+  }
+  
+  .nav a:hover {
+	color: #790252;
+	background: #fff;
+	outline: none;
+	position: relative;
+	background-color: #fff;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+  }
+  
+  
+  .nav a:hover::after {
+	content: "";
+	position: absolute;
+	background-color: transparent;
+	bottom: 100%;
+	right: 0;
+	height: 35px;
+	width: 35px;
+	border-bottom-right-radius: 20px;
+	box-shadow: 0 20px 0 0 #fff;
+  }
+  
+  .nav a:hover::before {
+	content: "";
+	position: absolute;
+	background-color: transparent;
+	top: 38px;
+	right: 0;   
+	height: 35px;
+	width: 35px;
+	border-top-right-radius: 20px;
+	box-shadow: 0 -20px 0 0 #fff;
+  }
+  
+  .nav p {
+	padding: 40px 0;
+  }

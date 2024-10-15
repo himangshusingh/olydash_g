@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+* {
+  font-family: 'Comfortaa', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  overflow: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #ffe4f0
+}
+
+th {
+  background-color: #790252;
+  color: rgb(255, 255, 255);
+}
+
+/* 
+  .button {
+    background-color: #790252;
+    border: none;
+    color:  #ffe4f0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+  } */
+
+.title-green {
+  color: #975C8D;
+}
+
+.title-red {
+  color: red;
+}
+
+/* button css */
+
+
+.button {
+  position: relative;
+  background: #444;
+  /* color: #fff; */
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+.button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #f2f0f0;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+.button:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+.button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #272822;
+  transition: 0.2s;
+}
+
+.button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+
+  50% {
+    transform: translateX(5px);
+  }
+
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+
+  100% {
+    box-shadow: #27272c;
+  }
+}
+
+
+/* buttons delete and update */
+
+
+button{
+  border: none;
+  
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* width: 1000px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container .btn {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 35px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #000000;
+  font-weight: 400px;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+
+.container .btn:hover a {
+  letter-spacing: 3px;
+}
+
+
+/* lower light */
+.container .btn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+
+.container .btn:hover::before
+
+/*lightup button*/
+  {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+/* upper light */
+.container .btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+
+.container .btn:hover::after
+
+/*lightup button*/
+  {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.container .btn:nth-child(1)::before,
+/*delete button */
+.container .btn:nth-child(1)::after {
+  background: #FE8484;
+  box-shadow: 0 0 5px #FE8484, 0 0 15px #FE8484, 0 0 30px #FE8484,
+    0 0 60px #FE8484;
+}
+/* update */
+.container .btn:nth-child(2)::before,
+.container .btn:nth-child(2)::after {
+  background: #B2D3C2;
+  box-shadow: 0 0 5px #B2D3C2, 0 0 15px #B2D3C2, 0 0 30px #B2D3C2,
+    0 0 60px #B2D3C2;
+}

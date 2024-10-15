@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("events")
 public class EventController {
-    private EventRepository eventRepository;
+    private final EventRepository eventRepository;
 
     public EventController(EventRepository eventRepository) {
         this.eventRepository = eventRepository;
@@ -25,18 +25,16 @@ public class EventController {
 
     @PostMapping("/saveevent")
     public Event saveEvent(@RequestBody Event event) {
-        if (event.geteventId() ==null) {
-            Event savedEvent = eventRepository.save(event);
-            return savedEvent;
+        if (event.getevent_id() ==null) {
+            return eventRepository.save(event);
         }
         return null;
     }
 
     @PutMapping("/updateevent")
     public Event updateEvent(@RequestBody Event event) {
-        if (event.geteventId() != null) {
-            Event updatedEvent = eventRepository.save(event);
-            return updatedEvent;
+        if (event.getevent_id() != null) {
+            return eventRepository.save(event);
         }
         return null;
     }
@@ -49,11 +47,7 @@ public class EventController {
     @GetMapping("/getbyid/{id}")
     public Event findById(@PathVariable Long id) {
         Optional<Event> optionalEvent = eventRepository.findById(id);
-        if (optionalEvent.isPresent()) {
-            return optionalEvent.get();
-        } else {
-            return null;
-        }
+        return optionalEvent.orElse(null);
     }
 
     @DeleteMapping("/delete/{id}")

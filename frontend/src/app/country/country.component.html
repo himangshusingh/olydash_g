@@ -1,0 +1,35 @@
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">{{title}}</h1>
+
+<h2 *ngIf="countries.length <1 ">No Data</h2>
+
+<table style="margin-top: 60px;">
+    <thead>
+      <tr>
+        <th>Country ID</th>
+        <th>Country Name</th>
+        <th>ISO Code</th>
+        <!-- <th style="padding-left: 6%">Actions</th> -->
+      </tr>
+    </thead>
+    <tbody *ngIf="countries.length > 0">
+      <tr *ngFor="let Country of countries">
+        
+        <td>{{Country.country_id}}</td>
+        <td>{{Country.Country_Name}}</td>
+        <td>{{Country.iso_code}}</td>
+        <!-- <td> 
+          <div class="container">
+          <div class="btn"><a  (click)="deleteCountry(Country.country_id)">Delete</a></div>
+          
+          <div class="btn"><a href="#">Update</a></div>
+        </div>
+        </td> -->
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- <button class= "button" (click)="AddCountry()" style="--clr:#790252; margin: 20px; float: right">
+    <span>Add Country</span>
+    <i></i>
+  </button> -->
