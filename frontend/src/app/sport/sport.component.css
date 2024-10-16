@@ -20,7 +20,6 @@ h1{
   background-clip: text; /* Fallback for other browsers */
   color: rgba(43, 0, 20, 0.9); /* Fallback color */
 }
-
 .title-green {
   color: #975C8D;
 }

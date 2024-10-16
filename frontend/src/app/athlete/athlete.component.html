@@ -1,0 +1,29 @@
+<!-- <h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">{{title}}</h1> -->
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">A&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;&nbsp;
+    E&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;E</h1>
+<h2 *ngIf="athletes.length <1 ">No Data</h2>
+
+<div class="tb">
+  <table>
+    <thead>
+      <tr>
+          <th>Athlete ID</th>
+          <th>Gender</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>DOB</th>
+          <th>Country ID</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="athletes.length > 0">
+      <tr class="border-bottom" *ngFor="let Athlete of athletes">
+        <td>{{Athlete.athlete_id}}</td>
+        <td>{{Athlete.gender}}</td>
+        <td>{{Athlete.first_name}}</td>
+        <td>{{Athlete.last_name}}</td>
+        <td>{{Athlete.date}}</td>
+        <td>{{Athlete.country.country_id}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

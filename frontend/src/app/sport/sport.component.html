@@ -1,0 +1,21 @@
+<!-- <h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">{{title}}</h1> -->
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">S&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;&nbsp;T</h1>
+<h2 *ngIf="sports.length <1 ">No Data</h2>
+
+<div class="tb">
+  <table>
+    <thead>
+      <tr>
+        <th>Sport ID</th>
+        <th>Sport Name</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="sports.length > 0">
+      <tr *ngFor="let sport of sports">
+        
+        <td>{{sport.sport_id}}</td>
+        <td>{{sport.sport_name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
