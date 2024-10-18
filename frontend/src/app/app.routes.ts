@@ -5,6 +5,7 @@ import { CountryComponent } from './country/country.component';
 import { SportComponent } from './sport/sport.component';
 import { AthleteComponent } from './athlete/athlete.component';
 import { EventComponent } from './event/event.component';
+import { AddCountryComponent } from './add-country/add-country.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'event',
         component: EventComponent,
+    },
+    {
+        path: 'add-country',
+        component: AddCountryComponent,
     }
 ];

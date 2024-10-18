@@ -2,22 +2,30 @@
 <h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">C&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;&nbsp;Y</h1>
 <h2 *ngIf="countries.length <1 ">No Data</h2>
 
-<div class="tb">
-  <table>
-    <thead>
-      <tr>
-          <th>Country ID</th>
-          <th>Country Name</th>
-          <th>ISO Code</th>
-      </tr>
-    </thead>
-    <tbody *ngIf="countries.length > 0">
-      <tr class="border-bottom" *ngFor="let Country of countries">
-        <td>{{Country.country_id}}</td>
-        <td>{{Country.country_Name}}</td>
-        <td>{{Country.iso_code}}</td>
 
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <div class="tb">
+    <table>
+      <thead>
+        <tr>
+            <th>Country ID</th>
+            <th>Country Name</th>
+            <th>ISO Code</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="countries.length > 0">
+        <tr class="border-bottom" *ngFor="let Country of countries">
+          <td>{{Country.country_id}}</td>
+          <td>{{Country.country_Name}}</td>
+          <td>{{Country.iso_code}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="button" (click)="AddCountry()" style="--clr:#790252;">
+      <span>Add Country</span>
+      <i></i>
+    </button>
+  </div>
+  <div class="button-wrapper">
+    
+  </div>
+

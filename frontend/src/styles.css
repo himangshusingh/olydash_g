@@ -1,17 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 .tb{
-    top: 50%;
-    left: 0.2%;
-    transform: translate(0%, 50%);
-    display: flex;
-    justify-content: center;
-  }
+  top: 50%;
+  left: 0.2%;
+  transform: translate(14%, 20%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
   table {
     border: solid 2px #000000;
     overflow: hidden; /* Important for rounding the corners */
     border-collapse: separate; /* Allows border radius to be applied */
     border-spacing: 0; /* Removes space between cells */
-    width: 100%;
+    width: 75%;
     /* margin-top: 120px; */
     border-radius: 20px; /* Applies border-radius to the whole table */
   }
