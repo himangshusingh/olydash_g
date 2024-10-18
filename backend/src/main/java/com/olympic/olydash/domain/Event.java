@@ -21,14 +21,14 @@ public class Event {
     @Column @NotNull
     private String event_name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "sport_id", referencedColumnName = "sport_id", nullable = false)
     private Sport sport;
 
     @Column
-    private String event_type_id; //this will be a foreign key, events_id_table_pending
+    private String event_type_id; //this will be a foreign key, events_id_table pending
 
-    public Long geteventId() {
+    public Long getevent_id() {
         return event_id;
     }
 

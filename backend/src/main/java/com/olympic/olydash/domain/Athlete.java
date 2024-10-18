@@ -20,9 +20,10 @@ public class Athlete{
     @NotNull
     private LocalDate date;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "country_name", referencedColumnName = "country_name", nullable = false)
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "country_id", referencedColumnName = "country_id", nullable = false)
     private Country country;
+
     @Column
     private String Gender;
 

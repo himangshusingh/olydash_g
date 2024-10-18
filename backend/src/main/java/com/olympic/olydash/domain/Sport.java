@@ -12,7 +12,7 @@ import jakarta.validation.constraints.NotNull;
 @Table(name = "TBL_Sport")
 public class Sport {
 
-    @Id 
+    @Id
     @NotNull 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long sport_id;

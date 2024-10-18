@@ -1,0 +1,25 @@
+<!-- <h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">{{title}}</h1> -->
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">C&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;U&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;&nbsp;Y</h1>
+<h2 *ngIf="events.length <1 ">No Data</h2>
+
+<div class="tb">
+  <table>
+    <thead>
+      <tr>
+          <th>Event ID</th>
+          <th>Sport Name</th>
+          <th>Sport ID</th>
+          <th>Event Type</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="events.length > 0">
+      <tr class="border-bottom" *ngFor="let Event of events">
+        <td>{{Event.event_id}}</td>
+        <td>{{Event.event_name}}</td>
+        <td>{{Event.sport.sport_id}}</td>
+        <td>{{Event.event_type_id}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

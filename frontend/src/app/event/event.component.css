@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@700;900&family=Oswald&family=Poppins:wght@700&display=swap');
+@import url('../../styles.css');
+* {
+  font-family: 'Comfortaa', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1{
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  font-family: 'Oswald', sans-serif;
+  background: linear-gradient(113.5deg, rgb(234, 234, 234) 22.3%, rgb(201, 234, 211) 56.6%, rgb(255, 180, 189) 90.9%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* This makes the text transparent to show the background */
+  background-clip: text; /* Fallback for other browsers */
+  color: rgba(43, 0, 20, 0.9); /* Fallback color */
+}
+
+.title-green {
+  color: #975C8D;
+}
+
+.title-red {
+  color: red;
+}

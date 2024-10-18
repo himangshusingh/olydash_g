@@ -1,11 +1,160 @@
 {
 	"info": {
-		"_postman_id": "33bfa6c8-82a5-4cf7-b4aa-6712c2b7377b",
+		"_postman_id": "8accc75a-fb39-4bc9-8b0a-e10798e88cf1",
 		"name": "olydash",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38057462"
+		"_exporter_id": "38002036"
 	},
 	"item": [
+		{
+			"name": "Country",
+			"item": [
+				{
+					"name": "savecountry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"country_Name\": \"India\",\r\n    \"iso_code\": 91\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/country/savecountry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"savecountry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/country/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatecountry",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 66,\r\n    \"name\": \"misus man mary\",\r\n    \"country\": \"USA\",\r\n    \"gender\": \"Male\",\r\n    \"event\": \"200m relay\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/country/updatecountry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"updatecountry"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/country/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"country",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
 		{
 			"name": "Athlete",
 			"item": [
@@ -22,7 +171,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"first_name\": \"John\",\r\n  \"gender\": \"Male\",\r\n  \"last_name\": \"Doe\",\r\n  \"date\": \"2002-04-02\"\r\n}\r\n",
+							"raw": "{\r\n    \"first_name\": \"Francis\",\r\n    \"last_name\": \"Langer\",\r\n    \"date\": \"2002-04-02\",\r\n    \"country\": {\r\n        \"country_id\": 2\r\n    },\r\n    \"gender\": \"Female\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -51,7 +200,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -126,7 +281,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/athletes/delete/1",
+							"raw": "http://localhost:8080/athletes/delete/101",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -134,6 +289,155 @@
 							"port": "8080",
 							"path": [
 								"athletes",
+								"delete",
+								"101"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sport",
+			"item": [
+				{
+					"name": "savesport",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sport_name\": \"cricket\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sport/savesport",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
+								"savesport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sport/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatesport",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 66,\r\n    \"name\": \"misus man mary\",\r\n    \"country\": \"USA\",\r\n    \"gender\": \"Male\",\r\n    \"event\": \"200m relay\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sport/updatesport",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
+								"updatesport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/sport/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sport",
 								"delete",
 								"1"
 							]
@@ -150,7 +454,13 @@
 					"name": "getAll",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:8080/events/getAll",
 							"protocol": "http",
@@ -170,10 +480,16 @@
 					"name": "saveevent",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"event_name\": \"Horse Riding\",\r\n  \"event_type_id\": \"field008\"\r\n}\r\n",
+							"raw": "{\r\n    \"event_name\": \"100m Sprint\",\r\n    \"sport\": {\r\n        \"sport_id\": 1\r\n    },\r\n    \"event_type_id\": \"track\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -240,6 +556,155 @@
 								"events",
 								"delete",
 								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medal",
+			"item": [
+				{
+					"name": "savemedal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"athletes\": {\r\n        \"athlete_id\": 1\r\n    },\r\n    \"events\": {\r\n        \"event_id\": 2\r\n    },\r\n    \"medal_type\": \"gold\",\r\n    \"Date\": \"2024-08-12\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medal/savemedal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medal",
+								"savemedal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medal/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medal",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatemedal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 66,\r\n    \"name\": \"misus man mary\",\r\n    \"country\": \"USA\",\r\n    \"gender\": \"Male\",\r\n    \"event\": \"200m relay\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medal/updatemedal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medal",
+								"updatemedal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "API-KEY",
+								"value": "12345-abcde-67890-fghij",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/medal/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medal",
+								"delete",
+								"1"
 							]
 						}
 					},

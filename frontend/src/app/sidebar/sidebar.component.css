@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	
+}
+.nav p {
+    padding: -3px;
+    text-align: center;
+}
+.nav {
+	font-family: 'Comfortaa', cursive;
+	font-size: 40px;
+	color: #212121;
+	width: 200px;
+	padding-left: 20px;
+	/* height: 100vh; */
+	background: linear-gradient(113.5deg, rgb(234, 234, 234) 22.3%, rgb(201, 234, 211) 56.6%, rgb(255, 180, 189) 90.9%);
+	/* background-image: linear-gradient(40deg, #796f74,#796f74); */
+	/* border-top-right-radius: 80px; */
+	border-radius: 30px;
+	position: fixed;
+    float: left;
+    z-index: 1;
+    top: 50%;
+    left: 0.2%;
+	transform: translate(0%, -50%);
+  }
+
+  
+  .nav a {
+	margin-top: 15px;
+	font-size: 20px;
+	color: #212121;
+	display: block;
+	padding: 12px;	
+	padding-left: 30px;
+	text-decoration: none;
+  }
+  
+  .nav a:hover {
+	color: #ffffff;
+	background: #212121;
+	outline: none;
+	position: relative;
+	background-color: #212121;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	/* border-radius: 20px;
+	width: 50%; */
+  }
+  .nav a:hover::after {
+	content: "";
+	position: absolute;
+	background-color: transparent;
+	bottom: 100%;
+	right: 0;
+	height: 35px;
+	width: 35px;
+	border-bottom-right-radius: 20px;
+	box-shadow: 0 20px 0 0 #212121;
+  }
+  
+  .nav a:hover::before {
+	content: "";
+	position: absolute;
+	background-color: transparent;
+	top: 100%;
+	right: 0;
+	height: 35px;
+	width: 35px;
+	border-top-right-radius: 20px;
+	box-shadow: 0 -20px 0 0 #212121;
+  }
+  
+
+  
+  .nav p {
+	padding: 40px 0;
+  }

@@ -71,8 +71,10 @@ class MyWebMvcConfigurer implements WebMvcConfigurer {
 	@Override
 	public void addCorsMappings(CorsRegistry registry) {
 		registry.addMapping("/**")
-				.allowedOrigins("http://localhost:4200")
-				.allowedMethods("GET", "POST", "PUT", "DELETE")
-				.allowedHeaders("Content-Type", "Authorization");
+        .allowedOrigins("http://localhost:4200")
+        .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS")
+        // .allowedHeaders("Content-Type", "Authorization", "API-KEY")
+        // .exposedHeaders("API-KEY")
+        .allowCredentials(true);
 	}
 }
